@@ -1,0 +1,38 @@
+/*CSS general*/
+*{
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+a:any-link{
+    color: #000000;
+}
+/*--FIN-- CSS general*/
+
+/*Navbar*/
+nav{
+    cursor: pointer;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+.navbar{
+    text-align: center;
+    width: 150px;
+    padding: 0 20px 0 20px;
+    background-color: white;
+    border: solid 2px #4F9C3E;
+    transition: all 100ms linear;
+}
+.navbar:hover{
+    background-color: #9ACE31;
+    border-bottom: ridge 2px #4F9C3E;
+    transition: all 100ms linear;
+}
+/*--FIN-- Navbar*/

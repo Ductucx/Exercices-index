@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 12px;
+}
+.white{
+    background-color: white;
+    color: black;
+}
+table{
+    border: solid 1px;
+    background-color: black;
+    color: white;
+}
+td{
+    padding: 15px;
+}

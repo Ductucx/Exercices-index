@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Activitat S1.3 (2)</title>
+        <script type="text/javascript">
+
+// === INICIO SCRIPT PALINDROMO ===
+
+    var palindromo = prompt("Escriba una frase y podrá saber si se trata de un palíndromo o no.","Pej: race car.")
+    // "prompt" sirve para mostrar un mensaje y pedir al usuario que introduzca un texto o un valor dentro de este.
+
+    function PalabraPalindromo(palindromo) {
+    // "function" es el inicio de un conjunto de scripts agrupados en una sola función.
+
+    palindromo=palindromo.toLowerCase().replace(/\s/g,"");
+    // ".toLowerCase" devuelve el valor en texto minúscula.
+    // ".replace" sustituye las coincidencias definidas. En este caso remplaza los espacios, <pej: race car -> racecar> .
+
+    palindromoReverse=palindromo.split("").reverse().toString();
+    // ".split" separa palabras de las frases. <Pej: race car -> "race","car"> .
+    // ".reverse" invierte el orden de los valores. <Pej: race car -> "car","race"> .
+    // ".toString" convierte el valor en cadena de texto.
+    //
+    // Por ejemplo:
+    //
+    //  var persona = {
+    //      nombre: "Pepito",
+    //      apellido: "Pérez",
+    //      toString: function() {
+    //          return this.nombre + " " + this.apellido;
+    //      }
+    //  };
+    //
+    //  console.log(persona.toString()); *Respuesta esperada* --> "Pepito Pérez" .
+
+    for (var i = 0; i < ((palindromoReverse.length)-1); i++) {
+        palindromoReverse=palindromoReverse.replace(",","");
+    };
+    // "for" es un bucle en el cual si el valor de condición es falso, este se termina.
+    // "i" puede ser una variable, expresión regular o índice en bucles como se ha visto en nuestro caso.
+    //
+    // Por ejemplo (expresión regular):
+    //
+    //  var regex = /hola/i;
+    //  var texto = "Hola mundo!"
+    //  console.log(regex.test(texto)); *Devuelve true*
+    //
+    //  # "regex" confirma el patrón de búsqueda, en este caso buscaría "hola" pero como tenemos el "/i" significa que indiferentemente de si "hola" contiene mayusculas o minusculas, lo va buscar por igual.
+    //
+    //
+    // ".length" indica el número de argumentos.
+    //
+    // Por ejemplo:
+    //
+    //  console.log(Function.length); /* 1 */
+    //
+    //  console.log(funciton () {}.length); /* 0 */
+    //  console.log(funciton (a) {}.length); /* 1 */
+    //  console.log(funciton (a) (b) {}.length); /* 2 */
+    //
+    //
+    // "i++" suma 1 al valor, es como decir +1.
+
+    if(palindromo==palindromoReverse){
+        resultado="¡CORRECTO! ¡Esto SI es un palíndromo!";
+    }
+    else{
+        resultado="INCORRECTO, esto NO es un palíndromo. Vuelva a intentarlo.";
+    }
+    // "if" es un condicional en el que si se cumple la condición definida, devuelve "true". Para entenderlo, "if" significa "si", y sería algo como por ejemplo "si se cupmle esta condición, entonces *ejecuta la operación* ".
+    // "else" sirve como complemento en el "if", y si la condición definida NO cumple, devuelve "true". Es como decir "de lo contrario haz esto *ejecuta la operación* ".
+
+    document.write("La respuesta final es... "+resultado);
+};
+
+PalabraPalindromo(palindromo);
+
+// === FIN SCRIPT PALINDROMO ===
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

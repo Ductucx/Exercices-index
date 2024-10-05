@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Activitat S1.3 (3)</title>
+        <script type="text/javascript">
+
+// === INICIO SCRIPT TABLA-VALORES ===
+
+                var i, j
+
+                var filas = Number(prompt("Introduzca el número de filas que desea aplicar: \n "));
+                var columnas = Number(prompt("Ahora le corresponde introducir el número de columnas: \n "));
+                // Creamos nuestras variables y le pedimos al usuario que introduzca el número de celdas que quiere generar con el comando "prompt".
+                // "Number" permite representar y manipular valores numéricos, ya sean positivos o negativos.
+
+                var res = filas * columnas;
+                // "*" se utiliza para indicar una multiplicación, como por ejemplo la "+" indica una suma, "-" una resta, "/" una división y finalmente "*" multiplicación.
+
+                document.write("<table border='4'>");
+                // "document.write" escribe una cadena de texto dentro del hilo de un documento. Estamos escribiendo <tr> ya que en HTML es el inicio de una o más filas.
+                // JavaScript es capaz de ejecutar código de otros lenguajes en tiempo real, como por ejemplo este caso donde estamos generando una tabla mediante una etiqueta de HTML.
+                // document.write("<table border=4"); empieza una tabla, aplicando también un grosor al borde de la tabla de 4 píxeles o puntos.
+
+                for (i = 0; i < filas; i++) {
+                    document.write("<tr>");
+                // Aqui estamos aplicando otra vez el bucle for, para que sume la variable "i" hasta que sea igual que "filas".
+                    // document.write("<tr>"); indica el inicio de una fila.
+
+                    for (j = 0; j < columnas; j++) {
+                        document.write("<td>");
+                        document.write(i+"-"+j);
+                        document.write("</td>");
+                    }
+                    // Aplicamos otro bucle for para conseguir el mismo objetivo que la variable "i", pero en este caso con las columnas.
+                        // document.write("<td>"); indica el inicio de una columna.
+                        // document.write(i+"-"+j); lo que hace es separar la fila y la columna por un gión pra que se pueda distinguir.
+                        // document.write("</td>"); indica el final de la columna.
+
+                    document.write("</tr>");
+                }
+                    // document.write("</tr>"); indica el final de la fila.
+
+                document.write("</table>");
+                // document.write("</table>"); indica el final de una tabla.
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("Total de casillas = "+res+"");
+                // document.write("<br>"); indica una separación de párrafo, en este caso son 2.
+                // La función del último "document.write" es de enseñar la cantidad total de casillas, por lo que para indicar el valor alfanumérico de una variable tendremos que definirla con "*" en ambos lados, "+res+".
+
+// === FIN SCRIPT TABLA-VALORES ===
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

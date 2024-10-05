@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitat S1.11. Pt.2</title>
+    <script>
+
+        var numero = prompt("Indique el número que desea multiplicar hasta 10");
+        var i = 0;
+        var comprobante = prompt("Su número es: "+numero+"\n\nDesea continuar? (Indique s/n)");
+
+        function comprobación(){
+            if (comprobante == "s"){
+                document.write("Continuando con la operación...","<br>","<br>")
+
+                for (i=0; i<=10; i++){
+                    var resultado = numero*i;
+                    document.write(numero+ "x" +i+ " = "+resultado+"<br>");
+                }
+            }
+            else{
+                document.write("Eyectando confirmación: Se ha denegado la operación.\n")
+                return;
+            }
+        }
+
+        comprobación();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

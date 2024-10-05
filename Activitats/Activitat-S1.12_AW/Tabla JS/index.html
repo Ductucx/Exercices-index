@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activitat S1.12.</title>
+</head>
+<body>
+    <script>
+
+//
+        document.write("<table id='tablero' style='border-collapse: collapse;'>");
+
+// Definiremos la anchura "width" y la altura "height" de nuestra tabla de ajedrez.
+        const width = 400;
+        const height = 400;
+  
+
+// Función para crear el tablero
+        function ajedrez() {
+            var tabla = document.getElementById("tablero");
+            // "document.getElementByID" sirve para devolver una referencia al elemento por su ID.
+            //
+            // Para entenderlo mejor, explicaremos un breve ejemplo:
+            //
+            //           document.write("<table id='tablero'...")
+            //                                         |
+            //                                Cogeremos esta ID
+            //                                         |
+            //                                         |
+            // var tabla = document.getElementByID("tablero")
+            //       |
+            //       |
+            //    *tabla* es igual al tablero generado mediante html
+
+// Iniciamos el bucle anidado
+            for (let i = 0; i < 8; i++){
+            // Aqui definimos que, si el número de la tabla es igual a 0 o no supera el número 8, entonces se le suma 1 a la variable
+
+                var row = document.createElement("tr");
+                // ".createElement" sirve para asignar a una variable una función, en este caso, html. La variable "row" es igual a <tr>, es decir, una fila.
+
+                for (let j = 0; j < 8; j++) {
+                    var cell = document.createElement("td");
+                    cell.style.width = width / 8 + "px";
+                    cell.style.height = height / 8 + "px";
+                    cell.style.border = "3px solid black";
+                    // "cell.style.'estilo'" aplica un estilo CSS dentro del código JS, siguiendo el mismo formato.
+
+                    if ((i + j) % 2 === 0) {
+                    // En esta ocasión definimos que si suma total entre la variable "i" mas(+) "j", dividido entre 2 da 0, entonces...
+
+                        cell.style.backgroundColor = "#ffffff";
+                        cell.style.fontSize = "20px";
+                        cell.style.textAlign = "center";
+                    } else {
+                        cell.style.backgroundColor = "#000000";
+                        cell.style.color = "#ffffff";
+                        cell.style.fontSize = "20px";
+                        cell.style.textAlign = "center";
+                    }
+
+                    const numero = document.createTextNode((i * 8) + (j + 1));
+                    cell.appendChild(numero);
+                    row.appendChild(cell);
+                    // ".createTextNode" crea un nuevo nodo de texto sin la necesidad de estar asociado a un elemento en particularm, como por ejemplo un <div> o <span>
+                    // ".appendChild" agrega nuevos elementos a un documento existente o sirve también para mover un elemento de la página. Es como un function solo que interpreta las variables como elementos los cuales puede agregar.
+                }
+            
+            tabla.appendChild(row);
+            }
+
+        }
+
+// Ejecutamos la función de nuestra tabla de ajedrez
+        ajedrez();
+    </script>
+</body>
+</html>
